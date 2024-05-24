@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Masa</title>
+    <link rel="stylesheet" href="masa.css">
+</head>
+<body>
+    <div id="converter">
+        <input type="text" id="inputValue" placeholder="Valor">
+        <div id="select-container">
+            <select id="fromUnit">
+                <option value="g">Gramos (g)</option>
+                <option value="kg">Kilogramos (kg)</option>
+                <option value="lb">Libras (lb)</option>
+                <option value="oz">Onzas (oz)</option>
+            </select>
+            <select id="toUnit">
+                <option value="g">Gramos (g)</option>
+                <option value="kg">Kilogramos (kg)</option>
+                <option value="lb">Libras (lb)</option>
+                <option value="oz">Onzas (oz)</option>
+            </select>
+        </div>
+        <button onclick="convertMass()">Convertir</button>
+        <h3>Resultado: <input type="text" id="display" readonly></h3>
+    </div>
+    <script src="masa.js"></script>
+</body>
+</html>
