@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de Tiempo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="tiempo.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center">Conversor de Tiempo</h2>
+          <div class="form-group">
+            <label for="inputValue">Valor:</label>
+            <input type="number" class="form-control" id="inputValue" min="0" value="0">
+          </div>
+          <div class="form-group">
+            <label for="inputUnit">Unidad de Tiempo de Entrada:</label>
+            <select class="form-control" id="inputUnit">
+              <option value="seconds">Segundos</option>
+              <option value="minutes">Minutos</option>
+              <option value="hours">Horas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="outputUnit">Unidad de Tiempo de Salida:</label>
+            <select class="form-control" id="outputUnit">
+              <option value="seconds">Segundos</option>
+              <option value="minutes">Minutos</option>
+              <option value="hours">Horas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Resultado:</label>
+            <span id="output" class="form-control" readonly>0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="tiempo.js"></script>
+</body>
+</html>
+

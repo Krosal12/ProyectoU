@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <link rel="stylesheet" href="divisas.css">
+</head>
+<body>
+    <div id="converter">
+        <input type="text" id="inputValue" placeholder="Valor">
+        <div id="select-container">
+            <select id="fromCurrency">
+                <option value="GTQ">GTQ</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <select id="toCurrency">
+                <option value="GTQ">GTQ</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+        <button onclick="convertCurrency()">Convertir</button>
+        <h3>Resultado: <input type="text" id="display" readonly></h3>
+    </div>
+    <script src="divisas.js"></script>
+</body>
+</html>

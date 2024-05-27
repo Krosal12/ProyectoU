@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .converter {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .converter div {
+    margin-bottom: 10px;
+  }
+  
+  .converter label {
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .converter input,
+  .converter span {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
