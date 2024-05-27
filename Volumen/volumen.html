@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Volumen</title>
+    <link rel="stylesheet" href="volumen.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="number" id="volumeInput" placeholder="Cantidad de volumen">
+        <select id="fromUnit">
+            <option value="liters">Litros</option>
+            <option value="cubic_meters">Metros Cúbicos</option>
+            <option value="gallons">Galones</option>
+        </select>
+        <select id="toUnit">
+            <option value="liters">Litros</option>
+            <option value="cubic_meters">Metros Cúbicos</option>
+            <option value="gallons">Galones</option>
+        </select>
+        <button onclick="convertVolume()">Convertir</button>
+        <div id="display"></div>
+    </div>
+    <script src="volumen.js"></script>
+</body>
+</html>

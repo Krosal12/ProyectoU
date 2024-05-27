@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Longitud</title>
+    <link rel="stylesheet" href="longitud.css">
+</head>
+<body>
+    <div id="converter">
+        <input type="text" id="inputValue" placeholder="Valor">
+        <select id="fromUnit">
+            <option value="meters">Metros</option>
+            <option value="kilometers">Kilómetros</option>
+            <option value="miles">Millas</option>
+            <option value="yards">Yardas</option>
+        </select>
+        <select id="toUnit">
+            <option value="meters">Metros</option>
+            <option value="kilometers">Kilómetros</option>
+            <option value="miles">Millas</option>
+            <option value="yards">Yardas</option>
+        </select>
+        <button onclick="convertLength()">Convertir</button>
+        <h3>Resultado: <input type="text" id="display" readonly></h3>
+    </div>
+    <script src="longitud.js"></script>
+</body>
+</html>
