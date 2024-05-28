@@ -1,4 +1,7 @@
-function convertMass(inputValue, fromUnit, toUnit) {
+function convertMass() {
+    const inputValue = parseFloat(document.getElementById('inputValue').value);
+    const fromUnit = document.getElementById('fromUnit').value;
+    const toUnit = document.getElementById('toUnit').value;
     let result;
 
     if (isNaN(inputValue)) {
@@ -75,7 +78,5 @@ function convertMass(inputValue, fromUnit, toUnit) {
         result = result.toFixed(2);
     }
 
-    return result;
+    document.getElementById('display').value = result;
 }
-
-module.exports = convertMass;
