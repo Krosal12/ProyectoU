@@ -1,55 +1,27 @@
-// Masa/masa.js
-function convertDataUnits(value, inputDataUnit, outputDataUnit) {
-    let bytes;
+const convertDataUnits = require('./datos');
 
-    // Convertir a bytes
-    if (inputDataUnit === "bytes") {
-        bytes = value;
-    } else if (inputDataUnit === "kilobytes") {
-        bytes = value * 1024;
-    } else if (inputDataUnit === "megabytes") {
-        bytes = value * 1024 * 1024;
-    } else {
-        return "Unidad de entrada inválida";
-    }
+test('converts bytes to kilobytes', () => {
+    expect(convertDataUnits(1024, 'bytes', 'kilobytes')).toBe('1.00');
+});
 
-    // Convertir de bytes a la unidad deseada
-    let result;
-    if (outputDataUnit === "bytes") {
-        result = bytes;
-    } else if (outputDataUnit === "kilobytes") {
-        result = bytes / 1024;
-    } else if (outputDataUnit === "megabytes") {
-        result = bytes / (1024 * 1024);
-    } else {
-        return "Unidad de salida inválida";
-    }
+test('converts kilobytes to bytes', () => {
+    expect(convertDataUnits(1, 'kilobytes', 'bytes')).toBe('1024.00');
+});
 
-    return result.toFixed(2);
-}
+test('converts megabytes to bytes', () => {
+    expect(convertDataUnits(1, 'megabytes', 'bytes')).toBe('1048576.00');
+});
 
-if (typeof document !== 'undefined') {
-    document.addEventListener("DOMContentLoaded", function() {
-        const inputValue = document.getElementById("inputValue");
-        const inputUnit = document.getElementById("inputUnit");
-        const outputUnit = document.getElementById("outputUnit");
-        const output = document.getElementById("output");
+test('converts bytes to megabytes', () => {
+    expect(convertDataUnits(1048576, 'bytes', 'megabytes')).toBe('1.00');
+});
 
-        function convertData() {
-            const value = parseFloat(inputValue.value);
-            const inputDataUnit = inputUnit.value;
-            const outputDataUnit = outputUnit.value;
 
-            const result = convertDataUnits(value, inputDataUnit, outputDataUnit);
-            output.textContent = result;
-        }
 
-        inputValue.addEventListener("input", convertData);
-        inputUnit.addEventListener("change", convertData);
-        outputUnit.addEventListener("change", convertData);
+test('handles invalid input unit', () => {
+    expect(convertDataUnits(1024, 'invalidUnit', 'kilobytes')).toBe('Unidad de entrada inválida');
+});
 
-        convertData(); // Llama a la función para mostrar el valor inicial
-    });
-}
-
-module.exports = convertDataUnits;
+test('handles invalid output unit', () => {
+    expect(convertDataUnits(1024, 'bytes', 'invalidUnit')).toBe('Unidad de salida inválida');
+});

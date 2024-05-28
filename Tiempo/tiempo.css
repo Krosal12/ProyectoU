@@ -1,6 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
-  }
+  text-align: center;
+  margin: 0;
+  background: #bf4d5d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
   
   .converter {
     max-width: 300px;
