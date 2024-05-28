@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    margin: 0;
+    background: #bf4d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+  
